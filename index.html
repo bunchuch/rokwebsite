@@ -1,1 +1,386 @@
+<!DOCTYPE html>
+<html lang="km" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROK Ecosystem | Enterprise E-Commerce Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rokey: '#F97316',     
+                        rokcy: '#3A9BA7',     
+                        corporate: '#0F172A', 
+                        surface: '#F8FAFC'    
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Kantumruy Pro', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #F97316 0%, #3A9BA7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-white text-corporate antialiased font-sans selection:bg-rokey selection:text-white">
 
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3 cursor-pointer">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-rokey to-rokcy flex items-center justify-center text-white font-bold text-xl shadow-md">R</div>
+                    <span class="font-bold text-2xl tracking-tight text-corporate">
+                        ROK <span class="font-light text-gray-500 text-lg">Ecosystem</span>
+                    </span>
+                </div>
+                
+                <div class="hidden md:flex space-x-10 text-sm font-medium text-gray-600">
+                    <a href="#solutions" class="hover:text-corporate transition-colors" data-i18n="nav_solutions">ដំណោះស្រាយ</a>
+                    <a href="#rokey" class="hover:text-rokey transition-colors" data-i18n="nav_customer">សម្រាប់អតិថិជន</a>
+                    <a href="#rokcy" class="hover:text-rokcy transition-colors" data-i18n="nav_business">សម្រាប់អាជីវកម្ម</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-6">
+                    <div class="relative group">
+                        <button class="flex items-center gap-2 text-gray-600 hover:text-corporate font-medium text-sm transition-colors py-2">
+                            <span id="current-lang-icon">🇰🇭</span>
+                            <span id="current-lang-text">KH</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute right-0 mt-0 w-36 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-right scale-95 group-hover:scale-100">
+                            <div class="py-1">
+                                <button onclick="changeLanguage('kh')" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-rokey flex items-center gap-2">🇰🇭 ភាសាខ្មែរ</button>
+                                <button onclick="changeLanguage('en')" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-rokey flex items-center gap-2">🇬🇧 English</button>
+                                <button onclick="changeLanguage('zh')" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-rokey flex items-center gap-2">🇨🇳 中文</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="bg-corporate text-white px-6 py-2.5 rounded-md text-sm font-medium hover:bg-gray-800 transition-all shadow-sm" data-i18n="nav_contact">
+                        ទំនាក់ទំនងពាណិជ្ជកម្ម
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-40 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full overflow-hidden -z-10 pointer-events-none">
+            <div class="absolute -top-40 right-0 w-96 h-96 bg-rokey/10 rounded-full blur-3xl"></div>
+            <div class="absolute top-20 -left-20 w-96 h-96 bg-rokcy/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface border border-gray-200 text-sm font-medium text-gray-600 mb-8">
+                <span class="w-2 h-2 rounded-full bg-rokcy animate-pulse"></span>
+                <span data-i18n="hero_badge">យុគសម័យថ្មីនៃ E-Commerce កម្ពុជា</span>
+            </div>
+            <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
+                <span data-i18n="hero_title_1">ភ្ជាប់ទំនាក់ទំនងពាណិជ្ជកម្ម</span> <br />
+                <span data-i18n="hero_title_2">ដោយប្រព័ន្ធ</span> <span class="gradient-text" data-i18n="hero_title_gradient">ឌីជីថលឆ្លាតវៃ</span>
+            </h1>
+            <p class="mt-4 text-lg lg:text-xl text-gray-500 max-w-3xl mx-auto mb-12 leading-relaxed font-light" data-i18n="hero_desc">
+                ROK Ecosystem ផ្ដល់នូវហេដ្ឋារចនាសម្ព័ន្ធបច្ចេកវិទ្យាដ៏រឹងមាំ ដែលផ្សារភ្ជាប់បទពិសោធន៍ទិញទំនិញដ៏ល្អឥតខ្ចោះរបស់អតិថិជន (ROK ey) ទៅនឹងប្រព័ន្ធគ្រប់គ្រងអាជីវកម្មដ៏មានប្រសិទ្ធភាព (ROK cy)។
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#rokcy" class="bg-corporate text-white px-8 py-4 rounded-lg font-medium shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all" data-i18n="btn_partner">
+                    ចូលរួមជាដៃគូអាជីវកម្ម
+                </a>
+                <a href="#rokey" class="bg-white text-corporate border border-gray-200 px-8 py-4 rounded-lg font-medium hover:bg-gray-50 transition-all" data-i18n="btn_explore">
+                    ស្វែងយល់ពីកម្មវិធីអតិថិជន
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="rokey" class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-rokey" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                        </div>
+                        <h2 class="text-3xl font-bold text-corporate" data-i18n="rokey_title">ROK ey (រកអី)</h2>
+                    </div>
+                    <h3 class="text-4xl font-extrabold mb-6 tracking-tight" data-i18n="rokey_heading">បទពិសោធន៍ទិញទំនិញ<br/>ប្រកបដោយទំនុកចិត្ត</h3>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed font-light" data-i18n="rokey_desc">
+                        កម្មវិធីដែលរចនាឡើងដើម្បីផ្ដល់ភាពងាយស្រួល និងសន្តិភាពផ្លូវចិត្តដល់អតិថិជន។ គ្រប់ប្រតិបត្តិការទូទាត់ប្រាក់ និងការដឹកជញ្ជូន ត្រូវបានធានាសុវត្ថិភាពខ្ពស់បំផុត។
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-6 h-6 rounded-full bg-orange-50 flex items-center justify-center flex-shrink-0"><span class="text-rokey text-sm">✓</span></div>
+                            <p class="text-gray-700"><strong class="text-corporate" data-i18n="rokey_f1_title">ស្វែងរកឆ្លាតវៃ:</strong> <span data-i18n="rokey_f1_desc">ប្រព័ន្ធ AI ជួយណែនាំទំនិញចំតម្រូវការជាក់លាក់របស់អ្នក។</span></p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-6 h-6 rounded-full bg-orange-50 flex items-center justify-center flex-shrink-0"><span class="text-rokey text-sm">✓</span></div>
+                            <p class="text-gray-700"><strong class="text-corporate" data-i18n="rokey_f2_title">ការទូទាត់រលូន:</strong> <span data-i18n="rokey_f2_desc">គាំទ្រ KHQR និងប្រព័ន្ធធនាគារក្នុងស្រុកប្រកបដោយសុវត្ថិភាព។</span></p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-6 h-6 rounded-full bg-orange-50 flex items-center justify-center flex-shrink-0"><span class="text-rokey text-sm">✓</span></div>
+                            <p class="text-gray-700"><strong class="text-corporate" data-i18n="rokey_f3_title">តាមដាន Real-time:</strong> <span data-i18n="rokey_f3_desc">ដឹងច្បាស់ពីទីតាំងទំនិញគ្រប់ពេលវេលា។</span></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-1 lg:order-2 relative h-96 bg-surface rounded-2xl border border-gray-100 overflow-hidden flex items-center justify-center shadow-inner">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-orange-50 to-transparent"></div>
+                    <div class="text-gray-400 font-medium text-sm z-10 flex flex-col items-center gap-3">
+                        <svg class="w-12 h-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        <span data-i18n="rokey_mockup">[ROK ey App Interface / Mockup Area]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rokcy" class="py-24 bg-surface border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative h-96 bg-white rounded-2xl border border-gray-200 overflow-hidden flex items-center justify-center shadow-md">
+                    <div class="absolute inset-0 bg-gradient-to-bl from-teal-50 to-transparent"></div>
+                    <div class="text-gray-400 font-medium text-sm z-10 flex flex-col items-center gap-3">
+                        <svg class="w-12 h-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        <span data-i18n="rokcy_mockup">[ROK cy Dashboard / Mockup Area]</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-rokcy" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h2 class="text-3xl font-bold text-corporate" data-i18n="rokcy_title">ROK cy (រកស៊ី)</h2>
+                    </div>
+                    <h3 class="text-4xl font-extrabold mb-6 tracking-tight" data-i18n="rokcy_heading">គ្រប់គ្រងអាជីវកម្ម<br/>ប្រកបដោយប្រសិទ្ធភាព</h3>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed font-light" data-i18n="rokcy_desc">
+                        ប្រព័ន្ធគ្រប់គ្រងការលក់កម្រិតអាជីព ដែលជួយឱ្យម្ចាស់អាជីវកម្មខ្នាតតូច និងមធ្យម (SMEs) អាចពង្រីកទីផ្សារ និងបង្កើនប្រាក់ចំណូល។
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-6 h-6 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0"><span class="text-rokcy text-sm">✓</span></div>
+                            <p class="text-gray-700"><strong class="text-corporate" data-i18n="rokcy_f1_title">បញ្ជាទិញភ្លាមៗ:</strong> <span data-i18n="rokcy_f1_desc">ប្រព័ន្ធ WebSocket ផ្ដល់ការជូនដំណឹងរហ័សឥតខ្ចោះ។</span></p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-6 h-6 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0"><span class="text-rokcy text-sm">✓</span></div>
+                            <p class="text-gray-700"><strong class="text-corporate" data-i18n="rokcy_f2_title">គ្រប់គ្រងស្តុក:</strong> <span data-i18n="rokcy_f2_desc">រៀបចំកាតាឡុក និងតាមដានទំនិញក្នុងឃ្លាំងយ៉ាងសុក្រឹត។</span></p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-6 h-6 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0"><span class="text-rokcy text-sm">✓</span></div>
+                            <p class="text-gray-700"><strong class="text-corporate" data-i18n="rokcy_f3_title">ហិរញ្ញវត្ថុ:</strong> <span data-i18n="rokcy_f3_desc">វិភាគទិន្នន័យលក់ និងការដកប្រាក់ចេញ (Payouts) ប្រកបដោយតម្លាភាព។</span></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="py-20 bg-corporate text-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="text-2xl lg:text-3xl font-bold mb-12" data-i18n="infra_title">ហេដ្ឋារចនាសម្ព័ន្ធបច្ចេកវិទ្យាកម្រិតខ្ពស់</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-gray-800 pt-12">
+                <div>
+                    <h4 class="font-bold text-xl mb-2 text-gray-200" data-i18n="infra_f1_title">សុវត្ថិភាពទិន្នន័យ</h4>
+                    <p class="text-gray-400 text-sm font-light" data-i18n="infra_f1_desc">រចនាសម្ព័ន្ធការពារការវាយប្រហារ និងកូដនីយកម្មទិន្នន័យហិរញ្ញវត្ថុ (End-to-End Encryption)។</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xl mb-2 text-gray-200" data-i18n="infra_f2_title">ល្បឿន និងស្ថិរភាព</h4>
+                    <p class="text-gray-400 text-sm font-light" data-i18n="infra_f2_desc">ដំណើរការលើម៉ាស៊ីនមេជំនាន់ថ្មី ទ្រទ្រង់ប្រតិបត្តិការរាប់ម៉ឺនក្នុងពេលតែមួយ (High Availability)។</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xl mb-2 text-gray-200" data-i18n="infra_f3_title">Microservices</h4>
+                    <p class="text-gray-400 text-sm font-light" data-i18n="infra_f3_desc">ស្ថាបត្យកម្មប្រព័ន្ធកម្រិត Enterprise អនុញ្ញាតឱ្យអាប់ដេតមុខងារដោយមិនរំខានដល់អ្នកប្រើប្រាស់។</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0B1120] py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3 opacity-80 hover:opacity-100 transition-opacity">
+                <div class="w-8 h-8 rounded bg-gradient-to-br from-rokey to-rokcy flex items-center justify-center text-white font-bold text-sm">R</div>
+                <span class="font-semibold text-lg text-white">ROK Ecosystem</span>
+            </div>
+            <p class="text-gray-500 text-sm font-light" data-i18n="footer_copy">
+                &copy; 2026 ROK Enterprise. រក្សាសិទ្ធិគ្រប់យ៉ាង។
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            kh: {
+                nav_solutions: "ដំណោះស្រាយ",
+                nav_customer: "សម្រាប់អតិថិជន",
+                nav_business: "សម្រាប់អាជីវកម្ម",
+                nav_contact: "ទំនាក់ទំនងពាណិជ្ជកម្ម",
+                
+                hero_badge: "យុគសម័យថ្មីនៃ E-Commerce កម្ពុជា",
+                hero_title_1: "ភ្ជាប់ទំនាក់ទំនងពាណិជ្ជកម្ម",
+                hero_title_2: "ដោយប្រព័ន្ធ",
+                hero_title_gradient: "ឌីជីថលឆ្លាតវៃ",
+                hero_desc: "ROK Ecosystem ផ្ដល់នូវហេដ្ឋារចនាសម្ព័ន្ធបច្ចេកវិទ្យាដ៏រឹងមាំ ដែលផ្សារភ្ជាប់បទពិសោធន៍ទិញទំនិញដ៏ល្អឥតខ្ចោះរបស់អតិថិជន (ROK ey) ទៅនឹងប្រព័ន្ធគ្រប់គ្រងអាជីវកម្មដ៏មានប្រសិទ្ធភាព (ROK cy)។",
+                btn_partner: "ចូលរួមជាដៃគូអាជីវកម្ម",
+                btn_explore: "ស្វែងយល់ពីកម្មវិធីអតិថិជន",
+                
+                rokey_title: "ROK ey (រកអី)",
+                rokey_heading: "បទពិសោធន៍ទិញទំនិញ\nប្រកបដោយទំនុកចិត្ត",
+                rokey_desc: "កម្មវិធីដែលរចនាឡើងដើម្បីផ្ដល់ភាពងាយស្រួល និងសន្តិភាពផ្លូវចិត្តដល់អតិថិជន។ គ្រប់ប្រតិបត្តិការទូទាត់ប្រាក់ និងការដឹកជញ្ជូន ត្រូវបានធានាសុវត្ថិភាពខ្ពស់បំផុត។",
+                rokey_f1_title: "ស្វែងរកឆ្លាតវៃ:",
+                rokey_f1_desc: "ប្រព័ន្ធ AI ជួយណែនាំទំនិញចំតម្រូវការជាក់លាក់របស់អ្នក។",
+                rokey_f2_title: "ការទូទាត់រលូន:",
+                rokey_f2_desc: "គាំទ្រ KHQR និងប្រព័ន្ធធនាគារក្នុងស្រុកប្រកបដោយសុវត្ថិភាព។",
+                rokey_f3_title: "តាមដាន Real-time:",
+                rokey_f3_desc: "ដឹងច្បាស់ពីទីតាំងទំនិញគ្រប់ពេលវេលា។",
+                rokey_mockup: "[ROK ey App Interface / Mockup Area]",
+                
+                rokcy_title: "ROK cy (រកស៊ី)",
+                rokcy_heading: "គ្រប់គ្រងអាជីវកម្ម\nប្រកបដោយប្រសិទ្ធភាព",
+                rokcy_desc: "ប្រព័ន្ធគ្រប់គ្រងការលក់កម្រិតអាជីព ដែលជួយឱ្យម្ចាស់អាជីវកម្មខ្នាតតូច និងមធ្យម (SMEs) អាចពង្រីកទីផ្សារ និងបង្កើនប្រាក់ចំណូល។",
+                rokcy_f1_title: "បញ្ជាទិញភ្លាមៗ:",
+                rokcy_f1_desc: "ប្រព័ន្ធ WebSocket ផ្ដល់ការជូនដំណឹងរហ័សឥតខ្ចោះ។",
+                rokcy_f2_title: "គ្រប់គ្រងស្តុក:",
+                rokcy_f2_desc: "រៀបចំកាតាឡុក និងតាមដានទំនិញក្នុងឃ្លាំងយ៉ាងសុក្រឹត។",
+                rokcy_f3_title: "ហិរញ្ញវត្ថុ:",
+                rokcy_f3_desc: "វិភាគទិន្នន័យលក់ និងការដកប្រាក់ចេញ (Payouts) ប្រកបដោយតម្លាភាព។",
+                rokcy_mockup: "[ROK cy Dashboard / Mockup Area]",
+                
+                infra_title: "ហេដ្ឋារចនាសម្ព័ន្ធបច្ចេកវិទ្យាកម្រិតខ្ពស់",
+                infra_f1_title: "សុវត្ថិភាពទិន្នន័យ",
+                infra_f1_desc: "រចនាសម្ព័ន្ធការពារការវាយប្រហារ និងកូដនីយកម្មទិន្នន័យហិរញ្ញវត្ថុ (End-to-End Encryption)។",
+                infra_f2_title: "ល្បឿន និងស្ថិរភាព",
+                infra_f2_desc: "ដំណើរការលើម៉ាស៊ីនមេជំនាន់ថ្មី ទ្រទ្រង់ប្រតិបត្តិការរាប់ម៉ឺនក្នុងពេលតែមួយ (High Availability)។",
+                infra_f3_title: "Microservices",
+                infra_f3_desc: "ស្ថាបត្យកម្មប្រព័ន្ធកម្រិត Enterprise អនុញ្ញាតឱ្យអាប់ដេតមុខងារដោយមិនរំខានដល់អ្នកប្រើប្រាស់។",
+                
+                footer_copy: "© 2026 ROK Enterprise. រក្សាសិទ្ធិគ្រប់យ៉ាង។"
+            },
+            en: {
+                nav_solutions: "Solutions",
+                nav_customer: "For Customers",
+                nav_business: "For Businesses",
+                nav_contact: "Contact Sales",
+                
+                hero_badge: "The New Era of Cambodia E-Commerce",
+                hero_title_1: "Connecting Commerce",
+                hero_title_2: "Powered by",
+                hero_title_gradient: "Smart Digital Systems",
+                hero_desc: "The ROK Ecosystem provides a robust technological infrastructure that connects a seamless customer shopping experience (ROK ey) with an efficient business management system (ROK cy).",
+                btn_partner: "Become a Partner",
+                btn_explore: "Explore Customer App",
+                
+                rokey_title: "ROK ey (Customer App)",
+                rokey_heading: "A Shopping Experience\nBuilt on Trust",
+                rokey_desc: "An application designed to provide convenience and peace of mind. Every payment and delivery transaction is secured with the highest standards.",
+                rokey_f1_title: "Smart Search:",
+                rokey_f1_desc: "AI recommendations tailored exactly to your needs.",
+                rokey_f2_title: "Seamless Payments:",
+                rokey_f2_desc: "Secure integration with KHQR and local banking systems.",
+                rokey_f3_title: "Real-time Tracking:",
+                rokey_f3_desc: "Know exactly where your items are at all times.",
+                rokey_mockup: "[ROK ey App Interface / Mockup Area]",
+                
+                rokcy_title: "ROK cy (Vendor Portal)",
+                rokcy_heading: "Efficient & Powerful\nBusiness Management",
+                rokcy_desc: "A professional sales management system helping small and medium enterprises (SMEs) expand their market and increase revenue.",
+                rokcy_f1_title: "Instant Orders:",
+                rokcy_f1_desc: "WebSocket system provides lightning-fast order notifications.",
+                rokcy_f2_title: "Digital Inventory:",
+                rokcy_f2_desc: "Organize catalogs and track warehouse stock accurately.",
+                rokcy_f3_title: "Financial Reports:",
+                rokcy_f3_desc: "Analyze sales data and manage payouts with full transparency.",
+                rokcy_mockup: "[ROK cy Dashboard / Mockup Area]",
+                
+                infra_title: "Enterprise-Grade Infrastructure",
+                infra_f1_title: "Data Security",
+                infra_f1_desc: "Robust architecture with DDoS protection and End-to-End Encryption for financial data.",
+                infra_f2_title: "Speed & Stability",
+                infra_f2_desc: "Deployed on next-gen servers supporting tens of thousands of concurrent transactions (High Availability).",
+                infra_f3_title: "Microservices",
+                infra_f3_desc: "An enterprise architecture that allows seamless feature updates with zero downtime.",
+                
+                footer_copy: "© 2026 ROK Enterprise. All rights reserved."
+            },
+            zh: {
+                nav_solutions: "解决方案",
+                nav_customer: "客户版应用",
+                nav_business: "商家版门户",
+                nav_contact: "联系销售",
+                
+                hero_badge: "柬埔寨电子商务新时代",
+                hero_title_1: "连接商业",
+                hero_title_2: "由",
+                hero_title_gradient: "智能数字系统驱动",
+                hero_desc: "ROK 生态系统提供强大的技术基础设施，将无缝的客户购物体验 (ROK ey) 与高效的业务管理系统 (ROK cy) 连接起来。",
+                btn_partner: "成为合作伙伴",
+                btn_explore: "探索客户应用",
+                
+                rokey_title: "ROK ey (客户版)",
+                rokey_heading: "建立在信任基础上的\n购物体验",
+                rokey_desc: "一款旨在提供便利和安心的应用程序。每一笔付款和送货交易都采用最高标准的安全保障。",
+                rokey_f1_title: "智能搜索:",
+                rokey_f1_desc: "为您量身定制的 AI 商品推荐。",
+                rokey_f2_title: "无缝支付:",
+                rokey_f2_desc: "安全集成 KHQR 和本地银行系统。",
+                rokey_f3_title: "实时跟踪:",
+                rokey_f3_desc: "随时了解您的物品所在位置。",
+                rokey_mockup: "[ROK ey 应用程序界面 / 模拟区域]",
+                
+                rokcy_title: "ROK cy (商家版)",
+                rokcy_heading: "高效强大的\n企业管理",
+                rokcy_desc: "专业的销售管理系统，帮助中小型企业 (SME) 扩大市场并增加收入。",
+                rokcy_f1_title: "即时订单:",
+                rokcy_f1_desc: "WebSocket 系统提供闪电般的订单通知。",
+                rokcy_f2_title: "数字库存:",
+                rokcy_f2_desc: "准确组织目录并跟踪仓库库存。",
+                rokcy_f3_title: "财务报告:",
+                rokcy_f3_desc: "分析销售数据并以完全透明的方式管理提现。",
+                rokcy_mockup: "[ROK cy 仪表板 / 模拟区域]",
+                
+                infra_title: "企业级基础设施",
+                infra_f1_title: "数据安全",
+                infra_f1_desc: "强大的架构，具有针对财务数据的端到端加密和 DDoS 防护。",
+                infra_f2_title: "速度与稳定性",
+                infra_f2_desc: "部署在下一代服务器上，支持数万个并发交易 (高可用性)。",
+                infra_f3_title: "微服务架构",
+                infra_f3_desc: "企业架构，允许在零停机时间的情况下无缝更新功能。",
+                
+                footer_copy: "© 2026 ROK Enterprise. 保留所有权利。"
+            }
+        };
+
+        function changeLanguage(lang) {
+            // Update Text Elements
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    // Use innerHTML to respect <br/> tags in headings
+                    element.innerHTML = translations[lang][key].replace(/\n/g, '<br/>');
+                }
+            });
+
+            // Update Dropdown UI
+            const langIcon = document.getElementById('current-lang-icon');
+            const langText = document.getElementById('current-lang-text');
+            
+            if(lang === 'kh') { langIcon.innerText = '🇰🇭'; langText.innerText = 'KH'; }
+            if(lang === 'en') { langIcon.innerText = '🇬🇧'; langText.innerText = 'EN'; }
+            if(lang === 'zh') { langIcon.innerText = '🇨🇳'; langText.innerText = 'ZH'; }
+        }
+    </script>
+
+</body>
+</html>
